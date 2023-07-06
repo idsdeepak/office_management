@@ -27,6 +27,12 @@ class Router {
     $currentUrl = $_SERVER["PATH_INFO"] ?? "/";
     $requestMethod = $_SERVER["REQUEST_METHOD"];
 
+    $loggedIn = $this->session->get("user");
+
+    if (!$loggedIn && $currentUrl !== "/login") {
+      header("Location: /login");
+      exit;
+    }
     if ($requestMethod == "GET") {
       $fn = $this->getRoutes[$currentUrl] ?? null;
     } else {
