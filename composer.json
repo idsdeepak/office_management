@@ -1,0 +1,15 @@
+{
+  "name": "ids/office_management",
+  "authors": [
+    {
+      "name": "Deepak",
+      "email": "deepak@idevelopingsolutions.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "oms\\": "./"
+    }
+  }
+}

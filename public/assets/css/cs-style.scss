@@ -1,0 +1,91 @@
+$primary-color: #ECF0F4;
+$border:#5F6261;
+$button-submit: rgba(3, 69, 127, 70%);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+//  _- - - - - -  - - - - - - -
+//   Login form css start 
+.sign-in-backgroundcolor {
+  background-color: $primary-color;
+}
+.sign-in-image::before {
+
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:rgba(74, 75, 101, 60%)
+}
+.sign-in-form button[type="submit"] {
+  background-color: $button-submit;
+  border-radius: 10px;
+  padding: 8px;
+  border: none;
+}
+.sign-in-form .form-control{
+  border: 1px solid $border;
+  padding: 20px;
+  font-size: 16px;
+  color: $border;
+  border-radius: 3px;
+  height: 50px;
+  font-weight: 300;
+}
+.sign-in-title h4{
+  color: $border;
+}
+.forgot-password h4{
+  color: #1CA5DC;
+  font-size: 18px;
+}
+.headline p:before, p:after {
+  color:$border;
+  content:'';
+  flex:1;
+  border-bottom:groove 2px;
+  margin: auto 0.25rem;
+}
+.sign-in-form .form-control:focus{
+  box-shadow: 0 0 0 0.15rem rgba(13,110,253,.25);
+}
+.headline p {
+  display:flex;
+}
+.sign-in-google {
+  width: 100%;
+  max-width: 260px;
+  border: 1px solid $border;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 8px 0px;
+  cursor: pointer;
+}
+.headline p{
+  font-size: 12px;
+  color:$border;
+}
+.sign-in-google h3{
+  font-size: 16px;
+  font-weight: 300;
+  color: $border;
+  margin: 0px;
+  padding-left: 15px;
+}
+.last-title h2{
+  color: #0000008c;
+  font-weight: 300;
+}
+//  _- - - - - -  - - - - - - -
+//   Login form css End 
+@media only screen and (max-width: 992px) {
+  .section{
+      height: 100% !important;
+  }
+}
