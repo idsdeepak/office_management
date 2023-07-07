@@ -11,6 +11,7 @@
 
   <!-- Vendor CSS Files -->
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
   <!-- Template Main CSS File -->
   <link href="/assets/css/cs-style.css" rel="stylesheet" />
 
@@ -22,9 +23,9 @@
 </head>
 
 <body>
-  <main class="sign-in-backgroundcolor">
-    <?php echo $content; ?>
-  </main>
+  <?php echo $content; ?>
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
