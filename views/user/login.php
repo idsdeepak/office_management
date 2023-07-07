@@ -1,3 +1,11 @@
+<?php
+echo "<pre>";
+print_r($errors);
+print_r($inputData);
+print_r($_SESSION);
+echo "</pre>";
+echo "output from views/user/login.php";
+?>
 <section class="section vh-100 d-flex align-items-lg-center justify-content-center">
   <div class="container">
     <div class="row">
@@ -9,12 +17,21 @@
           <h2 class="h4 mb-3">Welcome Back!</h2>
           <h4 class="h4 mb-3">Sign In</h4>
         </div>
-        <form class="sign-in-form px-lg-5">
+        <?php if ($errors) { ?>
+          <div class="alert alert-danger mx-lg-5" role="alert">
+            <?php
+            foreach ($errors as $error) {
+              echo $error . "</br>";
+            }
+            ?>
+          </div>
+        <?php } ?>
+        <form class="sign-in-form px-lg-5" action="" method="post">
           <div class="form-group">
-            <input type="email" class="form-control mb-3 py-2" placeholder="name@example.com" id="exampleInputEmail1" aria-describedby="emailHelp" required />
+            <input type="email" class="form-control mb-3 py-2" placeholder="name@example.com" id="email" aria-describedby="emailHelp" name="email" value="<?php echo $inputData["email"]; ?>" />
           </div>
           <div class="form-group">
-            <input type="password" class="form-control mb-3 py-2" placeholder="Enter your password" id="exampleInputPassword1" />
+            <input type="password" class="form-control mb-3 py-2" placeholder="Enter your password" id="password" name="password" value="<?php echo $inputData["password"]; ?>" />
           </div>
           <div class="forgot-password">
             <h4 class="h5 text-end pb-2">Forgot password?</h4>

@@ -19,4 +19,16 @@ class Database {
       exit;
     }
   }
+
+  public function getUserByEmail($email) {
+    $sql = "SELECT * FROM `users` WHERE `email`='$email'";
+    try {
+      $result = mysqli_query($this->conn, $sql);
+      $user = mysqli_fetch_assoc($result);
+    } catch (mysqli_sql_exception $e) {
+      echo "$e </br> failed";
+      exit;
+    }
+    return $user ?? false;
+  }
 }

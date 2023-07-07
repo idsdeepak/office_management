@@ -10,9 +10,9 @@
   <meta content="" name="keywords" />
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Template Main CSS File -->
-  <link href="assets/css/cs-style.css" rel="stylesheet" />
+  <link href="/assets/css/cs-style.css" rel="stylesheet" />
 
   <!-- Template Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />

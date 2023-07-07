@@ -27,16 +27,26 @@ class Router {
     $currentUrl = $_SERVER["PATH_INFO"] ?? "/";
     $requestMethod = $_SERVER["REQUEST_METHOD"];
 
-    $loggedIn = $this->session->get("user");
+    $user = $this->session->get("user");
 
-    if (!$loggedIn && $currentUrl !== "/login") {
+    if (!$user && $currentUrl !== "/login") {
       header("Location: /login");
       exit;
     }
+
+    if ($user && $user["is_admin"] && strpos($currentUrl, "admin") === false) {
+      header("Location: /admin/dashboard");
+      exit;
+    } elseif ($user && !$user["is_admin"] && strpos($currentUrl, "admin") !== false) {
+      header("Location: /employee/dashboard");
+      exit;
+    }
+
+
     if ($requestMethod == "GET") {
       $fn = $this->getRoutes[$currentUrl] ?? null;
     } else {
-      $fn = $this->getRoutes[$currentUrl] ?? null;
+      $fn = $this->postRoutes[$currentUrl] ?? null;
     }
 
     if ($fn) {
