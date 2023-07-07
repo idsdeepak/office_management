@@ -24,7 +24,7 @@ class Router {
   }
 
   public function resolve() {
-    $currentUrl = $_SERVER["PATH_INFO"] ?? "/";
+    $currentUrl = rtrim($_SERVER["PATH_INFO"] ?? "/", '/') ?: '/';
     $requestMethod = $_SERVER["REQUEST_METHOD"];
 
     $user = $this->session->get("user");
