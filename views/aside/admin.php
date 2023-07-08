@@ -1,17 +1,17 @@
 <aside id="sidebar" class="sidebar">
   <ul class="sidebar-nav" id="sidebar-nav">
     <li class="nav-item">
-      <a class="nav-link collapsed active" href="#">
+      <a class="nav-link collapsed active" href="/admin/dashboard">
         <i class="bi bi-speedometer2"></i>
         <span>Dashboard</span>
       </a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#Attendance-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Attendance</span><i class="bi bi-chevron-right ms-auto"></i></a>
+      <a class="nav-link collapsed" data-bs-target="#Attendance-nav" data-bs-toggle="collapse"> <i class="bi bi-menu-button-wide"></i><span>Attendance</span><i class="bi bi-chevron-right ms-auto"></i></a>
       <ul id="Attendance-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
         <li>
-          <a href="#"> <i class="bi bi-circle"></i><span>Attendance(Admin)</span> </a>
+          <a href="/admin/attendance"> <i class="bi bi-circle"></i><span>Attendance(Admin)</span> </a>
         </li>
         <li>
           <a href="#"> <i class="bi bi-circle"></i><span>Leaves(Admin)</span> </a>
@@ -25,7 +25,7 @@
       <a class="nav-link collapsed" data-bs-target="#Task-nav" data-bs-toggle="collapse" href="#"> <i class="bi-list-task"></i><span>Tasks</span><i class="bi bi-chevron-right ms-auto"></i></a>
       <ul id="Task-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
         <li>
-          <a href="#"> <i class="bi bi-circle"></i><span> All Task</span> </a>
+          <a href="/admin/tasks"> <i class="bi bi-circle"></i><span> All Task</span> </a>
         </li>
         <li>
           <a href="#"> <i class="bi bi-circle"></i><span>Task Details</span> </a>
@@ -36,7 +36,7 @@
       <a class="nav-link collapsed" data-bs-target="#Employees-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-people"></i><span>Employees</span><i class="bi bi-chevron-right ms-auto"></i></a>
       <ul id="Employees-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
         <li>
-          <a href="#"> <i class="bi bi-circle"></i><span>All Employee</span> </a>
+          <a href="/admin/employees"> <i class="bi bi-circle"></i><span>All Employee</span> </a>
         </li>
         <li>
           <a href="#"> <i class="bi bi-circle"></i><span>Add Employee</span> </a>
@@ -47,7 +47,7 @@
       <a class="nav-link collapsed" data-bs-target="#Projects-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-menu-button-wide"></i><span>Projects</span><i class="bi bi-chevron-right ms-auto"></i></a>
       <ul id="Projects-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
         <li>
-          <a href="#"> <i class="bi bi-circle"></i><span> All Projects</span> </a>
+          <a href="/admin/projects"> <i class="bi bi-circle"></i><span>All Projects</span> </a>
         </li>
         <li>
           <a href="#"> <i class="bi bi-circle"></i><span>Project Details</span> </a>
@@ -81,3 +81,10 @@
     </li>
   </ul>
 </aside>
+<?php
+// echo "<pre>";
+// if (strpos($_SERVER["PATH_INFO"], "attendance")) {
+//   echo "yes url have attendance";
+// }
+// echo "</pre>";
+?>

@@ -10,8 +10,8 @@
   <meta content="" name="keywords" />
 
   <!-- Vendor CSS Files -->
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
   <!-- Template Main CSS File -->
   <link href="/assets/css/cs-style.css" rel="stylesheet" />
 
@@ -24,8 +24,11 @@
 
 <body>
   <?php echo $content; ?>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

@@ -23,6 +23,7 @@ $router->post("/login", [$userController, "login"]);
 //admin routes
 $router->get("/admin", [$adminController, "index"]);
 $router->get("/admin/dashboard", [$adminController, "index"]);
+// $router->get("/admin/attendance", [$adminController, "attendance"]);
 
 //employee routes
 $router->get("/employee", [$employeeController, "index"]);
