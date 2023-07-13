@@ -4,14 +4,14 @@ require_once '../vendor/autoload.php';
 
 use oms\Router;
 use oms\controllers\UserController;
+use oms\controllers\DashboardController;
 use oms\controllers\AdminController;
 use oms\controllers\EmployeeController;
 
 $router = new Router();
 
-
-
 $userController = new UserController();
+$dashboardController = new DashboardController();
 $adminController = new AdminController();
 $employeeController = new EmployeeController();
 
@@ -21,16 +21,16 @@ $router->get("/login", [$userController, "login"]);
 $router->post("/login", [$userController, "login"]);
 
 //admin routes
-$router->get("/admin", [$adminController, "index"]);
-$router->get("/admin/dashboard", [$adminController, "index"]);
-// $router->get("/admin/attendance", [$adminController, "attendance"]);
+$router->get("/admin", [$dashboardController, "dashboard"]);
+$router->get("/admin/dashboard", [$dashboardController, "dashboard"]);
+$router->post("/admin", [$dashboardController, "dashboard"]);
+$router->post("/admin/dashboard", [$dashboardController, "dashboard"]);
 
 //employee routes
-$router->get("/employee", [$employeeController, "index"]);
-$router->get("/employee/dashboard", [$employeeController, "index"]);
-
-
-
+$router->get("/employee", [$dashboardController, "dashboard"]);
+$router->get("/employee/dashboard", [$dashboardController, "dashboard"]);
+$router->post("/employee", [$dashboardController, "dashboard"]);
+$router->post("/employee/dashboard", [$dashboardController, "dashboard"]);
 
 $router->resolve();
 

@@ -30,3 +30,41 @@
     });
   }
 })();
+
+// jquery 
+$(document).ready(function () {
+
+  // Function to get today's date
+  function getTodayDate() {
+    let today = new Date();
+    let formattedDate = today.toLocaleDateString("en-IN", {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+    return formattedDate;
+  }
+
+  // Set today's date in the appropriate element
+  $(".Dashboard-Attendance-title small").text(getTodayDate());
+
+  // Function to get current time
+  function getCurrentTime() {
+    let today = new Date();
+    let formattedTime = today.toLocaleTimeString("en-IN", {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    return formattedTime;
+  }
+
+  // Update the current time every second
+  setInterval(function () {
+    $(".punch-hours span").text(getCurrentTime());
+  }, 1000);
+
+});
+
+
+
